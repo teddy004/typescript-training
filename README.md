@@ -76,6 +76,95 @@ TypeScript provides several built-in data types that help in defining the type o
 
 ### Basic Types
 
+## Data types can be divided
+
+TypeScript data types can be divided into two categories: primitive and non-primitive types.
+
+### Primitive Types
+
+- **Boolean**: Represents true or false values.
+    ```typescript
+    let isDone: boolean = false;
+    ```
+
+- **Number**: Represents both integer and floating-point numbers.
+    ```typescript
+    let decimal: number = 6;
+    let hex: number = 0xf00d;
+    let binary: number = 0b1010;
+    let octal: number = 0o744;
+    ```
+
+- **String**: Represents text data.
+    ```typescript
+    let color: string = "blue";
+    ```
+
+- **Null and Undefined**: Represents null and undefined values.
+    ```typescript
+    let u: undefined = undefined;
+    let n: null = null;
+    ```
+
+- **Symbol**: Represents a unique and immutable value.
+    ```typescript
+    let sym1: symbol = Symbol();
+    let sym2: symbol = Symbol("key");
+    ```
+
+- **BigInt**: Represents whole numbers larger than 2^53 - 1.
+    ```typescript
+    let big: bigint = 100n;
+    ```
+
+### Non-Primitive Types
+
+- **Array**: Represents a collection of values of the same type.
+    ```typescript
+    let list: number[] = [1, 2, 3];
+    let list: Array<number> = [1, 2, 3];
+    ```
+
+- **Tuple**: Represents an array with a fixed number of elements of different types.
+    ```typescript
+    let x: [string, number];
+    x = ["hello", 10];
+    ```
+
+- **Enum**: Represents a collection of related values that can be numeric or string-based.
+    ```typescript
+    enum Color {Red, Green, Blue}
+    let c: Color = Color.Green;
+    ```
+
+- **Any**: Represents any type, useful when the type is not known at compile time.
+    ```typescript
+    let notSure: any = 4;
+    notSure = "maybe a string instead";
+    notSure = false;
+    ```
+
+- **Void**: Represents the absence of any type, commonly used as the return type of functions that do not return a value.
+    ```typescript
+    function warnUser(): void {
+        console.log("This is my warning message");
+    }
+    ```
+
+- **Never**: Represents the type of values that never occur, commonly used for functions that always throw an error or never return.
+    ```typescript
+    function error(message: string): never {
+        throw new Error(message);
+    }
+    ```
+
+- **Object**: Represents a non-primitive type.
+    ```typescript
+    let obj: object = { name: "John", age: 30 };
+    ```
+
+These data types help in writing robust and error-free code by providing static type checking at compile time.
+
 - **Boolean**: Represents true or false values.
     ```typescript
     let isDone: boolean = false;
