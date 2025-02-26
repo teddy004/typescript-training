@@ -1,0 +1,82 @@
+// Define an array of numbers
+let numbers: number[] = [1, 2, 3, 4, 5];
+
+// Add a new element to the end of the array
+numbers.push(6);
+
+// Remove the last element from the array
+numbers.pop();
+
+// Add a new element to the beginning of the array
+numbers.unshift(0);
+
+// Remove the first element from the array
+numbers.shift();
+
+// Find the index of a specific element
+let index = numbers.indexOf(3);
+
+// Remove an element by index
+if (index !== -1) {
+    numbers.splice(index, 1);
+}
+
+// Create a new array with each element doubled
+let doubledNumbers = numbers.map(num => num * 2);
+
+// Create a new array with each element doubled using forEach
+// let doubledNumbers: number[] = [];
+// numbers.forEach(num => {
+//     doubledNumbers.push(num * 2);
+// });
+
+// Filter the array to only include even numbers
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+
+// Reduce the array to the sum of its elements
+let sum = numbers.reduce((acc, num) => acc + num, 0);
+
+// Check if all elements are positive
+let allPositive = numbers.every(num => num > 0);
+
+// Check if at least one element is greater than 3
+let anyGreaterThanThree = numbers.some(num => num > 3);
+
+// Sort the array in ascending order
+numbers.sort((a, b) => a - b);
+
+// Reverse the array
+numbers.reverse();
+
+// Define an array of strings
+let fruits: string[] = ['Apple', 'Banana', 'Cherry'];
+
+
+// Define an object with specific properties
+interface Person {
+    name: string;
+    age: number;
+    isStudent: boolean;
+}
+
+// Create an object that matches the Person interface
+let person: Person = {
+    name: 'John Doe',
+    age: 25,
+    isStudent: true
+};
+
+// Define an array of objects
+let people: Person[] = [
+    { name: 'Alice', age: 30, isStudent: false },
+    { name: 'Bob', age: 22, isStudent: true },
+    { name: 'Charlie', age: 28, isStudent: false }
+];
+
+// Function to print person details
+function printPersonDetails(person: Person): void {
+    console.log(`Name: ${person.name}, Age: ${person.age}, Is Student: ${person.isStudent}`);
+}
+
+// Print details of each person in the people array
+people.forEach(printPersonDetails);
